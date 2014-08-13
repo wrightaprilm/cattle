@@ -1,7 +1,7 @@
 import pandas as pd
 import sys
 import csv
-import StringIO
+import re
 #lines=list(csv.reader(open(sys.argv[1])))
 lines=list(csv.reader(open('CTL 3K 06jul2011_LocusXDNA.csv')))
 df =pd.DataFrame(lines)
@@ -13,28 +13,27 @@ for col in df.columns:
         locus_names = df[df[col].isin(search)]
         break
 
-df.columns = df.iloc[1]
-
 search=['calls']
 for col in df.columns:
     if len(df[df[col].isin(search)]) > 0:
         calls = df[df[col].isin(search)]
 nuc_list = ['A','B','H']
-just_npns = snps[snps[:].isin(nuc_list)]
+just_npns = calls[calls[:].isin(nuc_list)]
 just_snps = just_npns.dropna(axis=1)
-
-index = snps.iloc[:,0]
-just_snps.insert(0, 'names',index)
+index = calls.iloc[:,0]
+new_index=[name.replace(" ","") for name in index]
+print new_index
+just_snps.insert(0, 'names',new_index)
 
 offset = len(just_snps.columns)
 col_names = locus_names.iloc[0,:offset]
+
 just_snps.columns = col_names
 second_df = just_snps
-replaced = just_snps.replace({'A':0,'B':1, 'H': '0'})
-second_place = second_df.replace({'A':0,'B':1, 'H': '1'})
+replaced = just_snps.replace({'A':0,'B':1, 'H': '0', '-':-9, 'NaN':-9})
+second_place = second_df.replace({'A':0,'B':1, 'H': '1','-':-9, 'NaN':-9})
 total = replaced.append(second_place)
 sorted = total.sort()
 
-
-sorted.to_csv('snps.csv','\t', index=False)
+sorted.to_csv('new_subset.csv','\t', index=False)
 
