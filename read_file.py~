@@ -42,3 +42,7 @@ def parse_prop():
 ##add function to populate structure file with more individuals to get more power.
 
 parse_pop()
+
+if __name__ == '__main__':
+    read_file()
+
