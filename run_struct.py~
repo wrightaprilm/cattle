@@ -1,0 +1,13 @@
+import subprocess
+import append
+import os
+
+
+def call_structure():
+	'''Now we execute structure'''
+	os.system("python ../Structure/structure.py -K 2 --input=structure_input.csv --output=testoutput_simple --prior=logistic --format=str --full --seed=100")
+
+
+#	command_output = process.communicate()[0]
+#	print command_output
+call_structure()

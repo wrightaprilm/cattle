@@ -20,12 +20,14 @@ def parse_prop():
 	just_npns = calls[calls[:].isin(nuc_list)]
 	just_snps = just_npns.dropna(axis=1)
 	index = calls.iloc[:,0]
-	new_index=[name.replace(" ","") for name in index]
-	print new_index
-	just_snps.insert(0, 'names',new_index)
+	new_index=[name.replace(' ',"") for name in index]
+#	print new_index
+#	just_snps.insert(0, '',new_index)
+	just_snps.index = new_index
 	offset = len(just_snps.columns)
 	col_names = locus_names.iloc[0,:offset]
 	just_snps.columns = col_names
+	print just_snps
 #	just_snps.to_csv('structure_input.csv', '\t', index=False, header=True)
 	return(just_snps)
 ##add function to populate structure file with more individuals to get more power.

@@ -12,15 +12,16 @@ def add_sequences():
 	kage = get_snpcount.enough_info()
 	kage = int(kage)
 	if kage == 3:
-		db =pd.read_csv('../data/3k_db.csv', sep='\t')
+		db =pd.read_csv('../data/3k_db.csv', sep=',', index_col=0, header=0)
+		print db
 	elif kage == 6:
-		db =pd.read_csv('../data/6k_db.csv', sep='\t')
+		db =pd.read_csv('../data/6k_db.csv', sep=',', index_col=0, header=0)
 	elif kage == 9:
-		db =pd.read_csv('../data/9k_db.csv', sep='\t')
+		db =pd.read_csv('../data/9k_db.csv', sep=',', index_col=0, header=0)
 	elif kage == 19:
-		db =pd.read_csv('../data/19k_db.csv', sep='\t')
+		db =pd.read_csv('../data/19k_db.csv', sep=',', index_col=0, header=0)
 	elif kage == 26:
-		db =pd.read_csv('../data/26k_db.csv', sep='\t')
+		db =pd.read_csv('../data/26k_db.csv', sep=',', index_col=0, header=0)
 	else:
 		db = pd.DataFrame()
 	individs = len(df.index)
@@ -29,8 +30,10 @@ def add_sequences():
 	while i < needed:
 		x = random.randint(1,(len(db.index)-1))
 		row = db.iloc[x]
+		print row
 		df = df.append(row)
 		i = i+1
+	df = df.dropna(0,how='all')
 	return(df)	
 	
 if __name__ == '__main__':

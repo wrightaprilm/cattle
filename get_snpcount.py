@@ -1,10 +1,11 @@
 import sys
 import re
+import read_file
 
 def enough_info():
 	'''Find out what kind of data are present in the file 
 	(ie 3k, 9k, 19k or 26k)'''
-	file = sys.argv[1]
+	file = read_file.get_fname()
 	kage = re.findall(r'\d|\d\d', file)
 	kage = kage[0]
 	if len(kage) == 0:
@@ -13,6 +14,7 @@ def enough_info():
 						  SNPs in file (if your data is '3k' SNP data, for \
 						  for example, enter '3' ")	
 	return(kage)
+
 
 
 if __name__ == '__main__':
