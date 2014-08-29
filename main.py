@@ -1,30 +1,23 @@
-import argparse
-import getopt
-import sys
-from Tkinter import Tk
-from tkFileDialog import askopenfilename
+#!/usr/bin/env python
+import read_file
+import parse_prop
+import get_snpcount
+import add_seq
+import append
+import integrate
+import add_to_db
+import run_struct
+import get_sites
 
-def main():
-	Tk().withdraw() 
-	filename = askopenfilename()
+file = integrate.integrate()
+df = read_file.read_file(file)
+new_df = parse_prop.parse_prop(df)
+#kage = get_snpcount.enough_info(file)
+str = append.append(new_df)
+sites, indices = get_sites.get_sites(new_df)
+#add_to_db.add_to_base(kage,df)
+run_struct.call_structure(sites, indices)
 
-	'''main function to collate the args'''
-	'''try:                               
-		opts, args = getopt.getopt(sys.argv[1:],"hi:o:",["infile=","ofile="]) 
-	except getopt.GetoptError:           
-		print 'Please specify a file'                         
-		sys.exit(2)
-	for opt, arg in opts:
-		if opt == '-h':
-			print 'test.py -i <inputfile> -o <outputfile>'
-			sys.exit()
-		elif opt in ("-i", "--infile"):
-			inputfile = arg
-			print 'Input file is "', inputfile
-		elif opt in ("-o", "--ofile"):
-			outputfile = arg
-#			print 'Output file is "', outputfile'''
-	return(filename)
 
-if __name__ == '__main__':
-    main()
+
+

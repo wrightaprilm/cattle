@@ -5,15 +5,12 @@ import get_snpcount
 import random
 
 
-def add_sequences():
+def add_sequences(df,kage):
 	'''STRUCTURE is more powerful if you have more individuals. So, if we have 
 	   less than 10 individuals, add more. '''
-	df = parse_prop.parse_prop()
-	kage = get_snpcount.enough_info()
 	kage = int(kage)
 	if kage == 3:
 		db =pd.read_csv('../data/3k_db.csv', sep=',', index_col=0, header=0)
-		print db
 	elif kage == 6:
 		db =pd.read_csv('../data/6k_db.csv', sep=',', index_col=0, header=0)
 	elif kage == 9:
@@ -36,4 +33,4 @@ def add_sequences():
 	return(df)	
 	
 if __name__ == '__main__':
-    add_sequences()
+    add_sequences(df,kage)

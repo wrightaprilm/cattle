@@ -1,11 +1,10 @@
 import sys
 import re
-import read_file
 
-def enough_info():
+
+def enough_info(file):
 	'''Find out what kind of data are present in the file 
 	(ie 3k, 9k, 19k or 26k)'''
-	file = read_file.get_fname()
 	kage = re.findall(r'\d|\d\d', file)
 	kage = kage[0]
 	if len(kage) == 0:
@@ -18,7 +17,7 @@ def enough_info():
 
 
 if __name__ == '__main__':
-    enough_info()
+	enough_info(file)
 
 
 

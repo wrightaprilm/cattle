@@ -1,0 +1,19 @@
+#define INFILE structure_input.csv.str
+#define MAXPOPS 2
+#define NUMINDS 2
+#define NUMLOCI 2833
+#define PLOIDY  2
+#define MISSINGVAL  -9
+#define ONEROW   0
+#define LABEL   1
+#define POPDATA  1
+#define POPFLAG   0
+#define LOCDATA   0
+#define PHENOTYPE   1
+#define EXTRACOLS  0
+#define MARKERNAME   0
+#define RECESSIVEALLELE   0
+#define MAPDISTANCE   0
+#define PHASED   0
+#define PHASEINFO   0
+
