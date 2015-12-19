@@ -1,0 +1,4 @@
+DNA Report on Q:\Illumina Project Data\CTL_BOVGP3V02_20151118\CTL_BOVGP3V02_20151118\CTL_BOVGP3V02_20151118_DNAReport.csv
+,# LOCI = 26145,# DNAs = 1,ProjectName = CTL_BOVGP3V02_20151118_DNAReport,GenCall Version = 6.3.0,Low GenCall Score Cutoff = 0.0500
+Row,DNA_ID,#No_Calls,#Calls,Call_Rate,A/A_Freq,A/B_Freq,B/B_Freq,Minor_Freq,50%_GC_Score,10%_GC_Score,0/1
+1,San Vicente 425,227,25918,0.9913,0.3361,0.3123,0.3516,0.4922,0.7984,0.6113,1

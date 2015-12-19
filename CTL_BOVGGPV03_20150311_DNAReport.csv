@@ -1,0 +1,4 @@
+DNA Report on Q:\Illumina Project Data\CTL_BOVGGPV03_20150311\CTL_BOVGGPV03_20150311\CTL_BOVGGPV03_20150311_DNAReport.csv
+,# LOCI = 26151,# DNAs = 1,ProjectName = CTL_BOVGGPV03_20150311_DNAReport,GenCall Version = 6.3.0,Low GenCall Score Cutoff = 0.1500
+Row,DNA_ID,#No_Calls,#Calls,Call_Rate,A/A_Freq,A/B_Freq,B/B_Freq,Minor_Freq,50%_GC_Score,10%_GC_Score,0/1
+1,Adam,174,25977,0.9933,0.3471,0.2927,0.3602,0.4934,0.8573,0.5075,1

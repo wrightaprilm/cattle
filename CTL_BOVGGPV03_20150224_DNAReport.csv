@@ -1,0 +1,4 @@
+DNA Report on Q:\Illumina Project Data\CTL_BOVGGPV03_20150224\CTL_BOVGGPV03_20150224\CTL_BOVGGPV03_20150224_DNAReport.csv
+,# LOCI = 26151,# DNAs = 1,ProjectName = CTL_BOVGGPV03_20150224_DNAReport,GenCall Version = 6.3.0,Low GenCall Score Cutoff = 0.1500
+Row,DNA_ID,#No_Calls,#Calls,Call_Rate,A/A_Freq,A/B_Freq,B/B_Freq,Minor_Freq,50%_GC_Score,10%_GC_Score,0/1
+1,Canelo 430/13,157,25994,0.9940,0.3420,0.2969,0.3610,0.4905,0.8573,0.5081,1

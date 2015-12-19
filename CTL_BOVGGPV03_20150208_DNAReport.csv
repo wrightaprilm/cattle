@@ -1,0 +1,4 @@
+DNA Report on Q:\Illumina Project Data\CTL_BOVGGPV03_20150208\CTL_BOVGGPV03_20150208\CTL_BOVGGPV03_20150208_DNAReport.csv
+,# LOCI = 26151,# DNAs = 1,ProjectName = CTL_BOVGGPV03_20150208_DNAReport,GenCall Version = 6.3.0,Low GenCall Score Cutoff = 0.1500
+Row,DNA_ID,#No_Calls,#Calls,Call_Rate,A/A_Freq,A/B_Freq,B/B_Freq,Minor_Freq,50%_GC_Score,10%_GC_Score,0/1
+1,Canyon Tumbleweed,307,25844,0.9883,0.3373,0.3064,0.3563,0.4905,0.8567,0.4995,1

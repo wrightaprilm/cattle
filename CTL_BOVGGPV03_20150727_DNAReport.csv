@@ -1,0 +1,4 @@
+DNA Report on Q:\Illumina Project Data\CTL_BOVGGPV03_20150727\CTL_BOVGGPV03_20150727\CTL_BOVGGPV03_20150727_DNAReport.csv
+,# LOCI = 26151,# DNAs = 1,ProjectName = CTL_BOVGGPV03_20150727_DNAReport,GenCall Version = 6.3.0,Low GenCall Score Cutoff = 0.1500
+Row,DNA_ID,#No_Calls,#Calls,Call_Rate,A/A_Freq,A/B_Freq,B/B_Freq,Minor_Freq,50%_GC_Score,10%_GC_Score,0/1
+1,Thomas Jefferson,341,25810,0.9870,0.3353,0.3054,0.3593,0.4880,0.8570,0.5002,1
